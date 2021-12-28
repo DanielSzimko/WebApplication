@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Server", "WebApplication_Server\WebApplication_Server.csproj", "{C7928CA3-1528-4F45-8E2F-C3AF6F1215AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Doctor", "WebApplication_Client\WebApplication_Doctor.csproj", "{B709DCD4-3710-4476-875C-9A38DE060401}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Doctor", "WebApplication_Doctor\WebApplication_Doctor.csproj", "{B709DCD4-3710-4476-875C-9A38DE060401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication_Assistant", "WebApplication_Assistent\WebApplication_Assistant.csproj", "{9A15C802-F639-4E27-B4C0-F912E2E15300}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication_Assistant", "WebApplication_Assistant\WebApplication_Assistant.csproj", "{9A15C802-F639-4E27-B4C0-F912E2E15300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
