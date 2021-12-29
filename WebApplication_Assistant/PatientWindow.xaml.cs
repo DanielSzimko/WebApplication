@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -49,31 +51,63 @@ namespace WebApplication_Assistant
 
         private bool ValidatePatient()
         {
-            if (string.IsNullOrEmpty(NameTextBox.Text))
+
+            if(NameTextBoxValidation() && TAJNumberTextBoxValidation() && ComplaintsTextBoxValidation())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        // NAMETEXTBOX VALIDATION
+
+        private bool NameTextBoxValidation()
+        {
+
+            if (string.IsNullOrWhiteSpace(NameTextBox.Text))
             {
                 MessageBox.Show("Name should not be empty.");
                 return false;
             }
 
-            if (string.IsNullOrEmpty(AddressTextBox.Text))
+            if (NameTextBox.Text.Any(ch => !Char.IsLetterOrDigit(ch)))
             {
-                MessageBox.Show("Address should not be empty.");
+                MessageBox.Show("Name should not contain special characters.");
                 return false;
             }
+            return true;
+        }
 
-            if (string.IsNullOrEmpty(TAJNumberTextBox.Text))
-            {
-                MessageBox.Show("TAJ nunmber should not be empty.");
-                return false;
-            }
+        // TAJNUMBERTEXTBOX VALIDATION 
+
+        private bool TAJNumberTextBoxValidation()
+        {
+
+            Regex rg = new Regex("([0-9]{3} [0-9]{3} [0-9]{3})");
+
+                if (!rg.IsMatch(TAJNumberTextBox.Text))
+                {
+                    MessageBox.Show("TAJ number should be like: 123 456 789");
+                    return false;
+                }
+            
+            return true;
+        }
+
+        // COMPLAINTSTEXTBOX VALIDATION
+
+        private bool ComplaintsTextBoxValidation()
+        {
 
             if (string.IsNullOrEmpty(ComplaintTextBox.Text))
             {
-                MessageBox.Show("Complaint should not be empty.");
+                MessageBox.Show("Complaints should not be empty.");
                 return false;
             }
 
             return true;
         }
+
     }
 }

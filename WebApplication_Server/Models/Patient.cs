@@ -32,6 +32,8 @@ namespace WebApplication_Server.Models
 
         public string Diagnosis { get; set; }
 
+        public DateTime AddedDate { get; set; }
+
         public override string ToString()
         {
             return $"{Name} - {Address} - {TAJNumber} - {Complaint} - {Diagnosis}";
