@@ -85,7 +85,7 @@ namespace WebApplication_Assistant
         private bool TAJNumberTextBoxValidation()
         {
 
-            Regex rg = new Regex("([0-9]{3} [0-9]{3} [0-9]{3})");
+            Regex rg = new Regex("([0-9]{3} [0-9]{3} [0-9]{3}$)");
 
                 if (!rg.IsMatch(TAJNumberTextBox.Text))
                 {
