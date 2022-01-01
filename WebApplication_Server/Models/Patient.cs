@@ -21,8 +21,8 @@ namespace WebApplication_Server.Models
         public string Address { get; set; }
 
         [Required]
-        [MaxLength(9)]
-        [MinLength(9)]
+        [MaxLength(11)]
+        [MinLength(11)]
         public string TAJNumber { get; set; }
 
         [Required]
@@ -36,7 +36,7 @@ namespace WebApplication_Server.Models
 
         public override string ToString()
         {
-            return $"{Name} - {Address} - {TAJNumber} - {Complaint} - {Diagnosis}";
+            return $"{Name} - {Address} - {TAJNumber} - {Complaint} - {Diagnosis} - {AddedDate}";
         }
 
     }

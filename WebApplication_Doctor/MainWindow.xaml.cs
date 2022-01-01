@@ -48,7 +48,13 @@ namespace WebApplication_Doctor
         private void UpdatePatientListBox()
         {
             var patient = PatientDataProvider.GetPatients().ToList();
+            patient = patient.OrderBy(x => x.AddedDate).ToList();
             PatientsListBox.ItemsSource = patient;
+        }
+
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            UpdatePatientListBox();
         }
     }
 }

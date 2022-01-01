@@ -48,7 +48,7 @@ namespace WebApplication_Doctor
                 _Patient.TAJNumber = TAJNumberTextBox.Text;
                 _Patient.Complaint = ComplaintTextBox.Text;
                 _Patient.Diagnosis = DiagnosisTextBox.Text;
-
+                
                 PatientDataProvider.UpdatePatient(_Patient);
 
                 DialogResult = true;

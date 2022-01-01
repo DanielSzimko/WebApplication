@@ -19,6 +19,7 @@
         <ListBox x:Name="PatientsListBox" Grid.Row="1" Margin="15" SelectionMode="Single"/>
 
         <Button Grid.Row="2" Content="Add diagnosis" Width="100" HorizontalAlignment="Right" Margin="15, 0, 15, 15" Click="AddPatient_Click"/>
+        <Button Grid.Row="2" Content="Refresh" Width="100" HorizontalAlignment="Left" Margin="15, 0, 15, 15" Click="RefreshButton_Click"/>
 
     </Grid>
 </Window>

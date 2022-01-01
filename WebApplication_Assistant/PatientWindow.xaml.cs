@@ -39,6 +39,7 @@ namespace WebApplication_Assistant
                 _Patient.Address = AddressTextBox.Text;
                 _Patient.TAJNumber = TAJNumberTextBox.Text;
                 _Patient.Complaint = ComplaintTextBox.Text;
+                _Patient.AddedDate = DateTime.Now;
 
                 PatientDataProvider.CreatePatient(_Patient);
 
