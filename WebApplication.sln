@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Server", "We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Doctor", "WebApplication_Doctor\WebApplication_Doctor.csproj", "{B709DCD4-3710-4476-875C-9A38DE060401}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication_Assistant", "WebApplication_Assistant\WebApplication_Assistant.csproj", "{9A15C802-F639-4E27-B4C0-F912E2E15300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Assistant", "WebApplication_Assistant\WebApplication_Assistant.csproj", "{9A15C802-F639-4E27-B4C0-F912E2E15300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientUnitTests", "PatientUnitTests\PatientUnitTests.csproj", "{8BB77689-A68B-4C7D-9445-55722E5782CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9A15C802-F639-4E27-B4C0-F912E2E15300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A15C802-F639-4E27-B4C0-F912E2E15300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A15C802-F639-4E27-B4C0-F912E2E15300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB77689-A68B-4C7D-9445-55722E5782CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB77689-A68B-4C7D-9445-55722E5782CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB77689-A68B-4C7D-9445-55722E5782CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB77689-A68B-4C7D-9445-55722E5782CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

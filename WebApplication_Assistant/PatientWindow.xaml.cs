@@ -53,55 +53,21 @@ namespace WebApplication_Assistant
         private bool ValidatePatient()
         {
 
-            if(NameTextBoxValidation() && TAJNumberTextBoxValidation() && ComplaintsTextBoxValidation())
+            PatientValidator patientValidator = new PatientValidator();
+
+            if(!patientValidator.NameTextBoxValidation(NameTextBox.Text))
             {
-                return true;
-            }
-
-            return false;
-        }
-
-        // NAMETEXTBOX VALIDATION
-
-        private bool NameTextBoxValidation()
-        {
-
-            if (string.IsNullOrWhiteSpace(NameTextBox.Text))
-            {
-                MessageBox.Show("Name should not be empty.");
+                MessageBox.Show("Name should not be empty or use special characters.");
                 return false;
             }
 
-            if (NameTextBox.Text.Any(ch => !Char.IsLetterOrDigit(ch)))
+            if (!patientValidator.TAJNumberTextBoxValidation(TAJNumberTextBox.Text))
             {
-                MessageBox.Show("Name should not contain special characters.");
+                MessageBox.Show("TAJ number's format should be like 000 000 000");
                 return false;
             }
-            return true;
-        }
 
-        // TAJNUMBERTEXTBOX VALIDATION 
-
-        private bool TAJNumberTextBoxValidation()
-        {
-
-            Regex rg = new Regex("([0-9]{3} [0-9]{3} [0-9]{3}$)");
-
-                if (!rg.IsMatch(TAJNumberTextBox.Text))
-                {
-                    MessageBox.Show("TAJ number should be like: 123 456 789");
-                    return false;
-                }
-            
-            return true;
-        }
-
-        // COMPLAINTSTEXTBOX VALIDATION
-
-        private bool ComplaintsTextBoxValidation()
-        {
-
-            if (string.IsNullOrEmpty(ComplaintTextBox.Text))
+            if (!patientValidator.ComplaintsTextBoxValidation(ComplaintTextBox.Text))
             {
                 MessageBox.Show("Complaints should not be empty.");
                 return false;
