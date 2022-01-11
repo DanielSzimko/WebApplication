@@ -27,7 +27,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Content="First name" Margin="10"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="First name" Margin="10" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="0" Margin="10" BorderBrush="#FF0085EC">
                 <TextBox.Resources>
                     <Style TargetType="Border">
@@ -36,7 +36,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Last name" Margin="10"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="Last name" Margin="10" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="AddressTextBox" Grid.Column="1" Grid.Row="1" Margin="10" BorderBrush="#FF0085EC">
                 <TextBox.Resources>
                     <Style TargetType="Border">
@@ -45,7 +45,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="2" Content="TAJ Number" Margin="10"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="TAJ Number" Margin="10" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="TAJNumberTextBox" Grid.Column="1" Grid.Row="2" Margin="10" BorderBrush="#FF0085EC">
                 <TextBox.Resources>
                     <Style TargetType="Border">
@@ -54,7 +54,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Complaint" Margin="10"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="Complaint" Margin="10" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="ComplaintTextBox" Grid.Column="1" Grid.Row="3" Margin="10,10,10,23" Grid.RowSpan="2" BorderBrush="#FF0085EC">
                 <TextBox.Resources>
                     <Style TargetType="Border">
@@ -63,7 +63,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="4" Content="Diagnosis" Margin="10,45,10,-25"/>
+            <Label Grid.Column="0" Grid.Row="4" Content="Diagnosis" Margin="10,45,10,-25" FontFamily="Times New Roman" FontWeight="Bold"/>
             <TextBox x:Name="DiagnosisTextBox" Grid.Column="1" Grid.Row="4" Margin="10,45,10,-56" BorderBrush="#FF0085EC">
                 <TextBox.Resources>
                     <Style TargetType="Border">
@@ -75,14 +75,14 @@
         </Grid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom">
-            <Button x:Name="UpdateButton" Content="Update" Width="80" Margin="10" Click="UpdateButton_Click" Background="#FF0085EC">
+            <Button x:Name="UpdateButton" Content="Update" Width="80" Margin="10" Click="UpdateButton_Click" Background="#FF0085EC" FontFamily="Times New Roman">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="DeleteButton" Content="Delete" Width="80" Margin="10" Click="DeleteButton_Click" Background="#FF0085EC">
+            <Button x:Name="DeleteButton" Content="Delete" Width="80" Margin="10" Click="DeleteButton_Click" Background="#FF0085EC" FontFamily="Times New Roman">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

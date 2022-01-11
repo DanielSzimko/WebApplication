@@ -14,12 +14,32 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Patients" FontWeight="Bold" Margin="15, 15, 15, 0"/>
+        <Image Grid.RowSpan="3" Source="/01.jpg" Stretch="Fill"/>
 
-        <ListBox x:Name="PatientsListBox" Grid.Row="1" Margin="15" SelectionMode="Single"/>
+        <Label Grid.Row="0" Content="Patients" FontWeight="Bold" Margin="15, 15, 15, 0" FontFamily="Times New Roman"/>
 
-        <Button Grid.Row="2" Content="Add diagnosis" Width="100" HorizontalAlignment="Right" Margin="15, 0, 15, 15" Click="AddPatient_Click"/>
-        <Button Grid.Row="2" Content="Refresh" Width="100" HorizontalAlignment="Left" Margin="15, 0, 15, 15" Click="RefreshButton_Click"/>
+        <ListBox x:Name="PatientsListBox" Grid.Row="1" Margin="15" SelectionMode="Single" BorderBrush="#FF0085EC">
+            <ListBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+
+        <Button Grid.Row="2" Content="Add diagnosis" Width="100" HorizontalAlignment="Right" Margin="15, 0, 15, 15" Click="AddPatient_Click" Background="#FF0085EC" FontFamily="Times New Roman">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Grid.Row="2" Content="Refresh" Width="100" HorizontalAlignment="Left" Margin="15, 0, 15, 15" Click="RefreshButton_Click" Background="#FF0085EC" FontFamily="Times New Roman">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
